@@ -1,0 +1,77 @@
+$primary-background: #f0f1f3;
+$primary-text: #727272;
+$secondary-background: #ffffff;
+
+.gluePage_container {
+    width: 100%;
+    min-height: 100vh;
+    background-color: $primary-background;
+    color: $primary-text;
+
+    .gluePage_Header {
+        width: 100%;
+        height: 60px;
+        background-color: $secondary-background;
+        display: flex;
+        align-items: center;
+        box-shadow: 0 0 5px 0 rgba(0, 0, 0, 0.1);
+
+        &:hover {
+            box-shadow: 0 0 5px 0 rgba(0, 0, 0, 0.5);
+        }
+
+        .gluePage_Header_left {
+            flex: 1;
+            padding-left: 40px;
+
+            @media screen and (max-width: 768px) {
+                padding-left: 10px;
+            }
+
+            .gluePage_Header_left_logo {
+                border: 1px solid $primary-text;
+                width: 180px;
+                font-size: larger;
+                font-weight: 600;
+                padding: 10px;
+                text-align: center;
+                cursor: pointer;
+
+                &:hover {
+                    background-color: $primary-text;
+                    color: $secondary-background;
+                }
+            }
+        }
+        .gluePage_Header_right {
+            display: flex;
+            justify-content: flex-end;
+            padding-right: 40px;
+            gap: 40px;
+
+            @media screen and (max-width: 768px) {
+                gap: 20px;
+                padding-right: 10px;
+            }
+
+            div {
+                border: 1px solid $primary-text;
+                padding: 10px;
+                border-radius: 5px;
+                font-weight: 600;
+                cursor: pointer;
+
+                &:hover {
+                    background-color: $primary-text;
+                    color: $secondary-background;
+                }
+
+                @media screen and (max-width: 768px) {
+                    padding: 10px;
+                    font-weight: 600;
+                    min-width: 60px;
+                }
+            }
+        }
+    }
+}

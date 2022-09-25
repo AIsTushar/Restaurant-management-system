@@ -1,0 +1,129 @@
+.homepage_container {
+    min-height: 100vh;
+    padding: 20px;
+    // background-color: aqua;
+
+    .paddingTop20 {
+        padding-top: 30px;
+    }
+
+    .homepage_header {
+        height: 400px;
+        // background-color: aqua;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        padding: 0 20px;
+        color: white;
+        background-image: linear-gradient(
+                rgba(0, 0, 0, 0.5),
+                rgba(0, 0, 0, 0.5)
+            ),
+            url("../../media/snackbox_cover.png");
+        background-size: contain;
+        background-repeat: no-repeat;
+        background-position: center;
+        background-color: black;
+
+        h1 {
+            padding: 0;
+            margin: 0;
+            opacity: 0.5;
+        }
+        h3 {
+            padding: 0;
+            margin: 0;
+            opacity: 0.5;
+        }
+
+        p {
+            opacity: 0.5;
+        }
+    }
+
+    .homepage_header:hover {
+        h1 {
+            transition: all 1s;
+            opacity: 1;
+        }
+        h3 {
+            transition: all 0.7s;
+            opacity: 1;
+        }
+        p {
+            transition: all 0.4s;
+            opacity: 1;
+        }
+    }
+    .type_food_container {
+        width: 100%;
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+        gap: 20px;
+        padding: 10px;
+
+        .food_type {
+            border: 1px solid #ccc;
+            background-image: url("https://www.assaggioboston.com/news/wp-content/uploads/2021/01/shutterstock_1554750272.jpg");
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            height: 200px;
+            overflow: hidden;
+
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            cursor: pointer;
+
+            h1 {
+                color: white;
+                text-align: center;
+                background-color: rgba(0, 0, 0, 0.5);
+                padding: 20px;
+                transition: transform 0.5s; /* Animation */
+            }
+
+            &:hover {
+                h1 {
+                    transform: scale(1.2);
+                    background-color: rgba(0, 0, 0, 0.8);
+                }
+            }
+        }
+    }
+    .top_food_container {
+        width: 100%;
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+        gap: 20px;
+        padding: 10px;
+        .top_food {
+            border-radius: 10px;
+            box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+            cursor: pointer;
+            transition: transform 0.5s; /* Animation */
+            padding: 5px;
+
+            &:hover {
+                transform: scale(1.05);
+                box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+            }
+
+            img {
+                width: 100%;
+                height: 300px;
+                object-fit: cover;
+            }
+
+            .desc_container {
+                padding: 10px;
+                display: flex;
+                flex-direction: row;
+                justify-content: space-between;
+                align-items: center;
+            }
+        }
+    }
+}
